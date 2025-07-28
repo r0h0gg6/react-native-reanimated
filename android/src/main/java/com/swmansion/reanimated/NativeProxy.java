@@ -46,7 +46,7 @@ public class NativeProxy extends NativeProxyCommon {
             /* isBridgeless */ false);
     prepareLayoutAnimations(LayoutAnimations);
     installJSIBindings();
-    if (BuildConfig.DEBUG) {
+    if (false) {
       checkCppVersion();
     }
   }

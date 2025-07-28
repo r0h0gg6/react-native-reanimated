@@ -54,7 +54,7 @@ public class NativeProxy extends NativeProxyCommon {
 
     prepareLayoutAnimations(LayoutAnimations);
     installJSIBindings();
-    if (BuildConfig.DEBUG) {
+    if (false) {
       checkCppVersion();
     }
   }

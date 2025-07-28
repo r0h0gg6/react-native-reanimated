@@ -209,7 +209,7 @@ apply plugin: "maven-publish"
 apply plugin: "de.undercouch.download"
 
 android {
-    compileSdkVersion safeExtGet("compileSdkVersion", 34)
+    compileSdkVersion safeExtGet("compileSdkVersion", 35)
 
     def agpVersion = com.android.Version.ANDROID_GRADLE_PLUGIN_VERSION
     if (agpVersion.tokenize('.')[0].toInteger() >= 7) {
@@ -239,8 +239,8 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion safeExtGet("minSdkVersion", 23)
-        targetSdkVersion safeExtGet("targetSdkVersion", 34)
+        minSdkVersion safeExtGet("minSdkVersion", 24)
+        targetSdkVersion safeExtGet("targetSdkVersion", 35)
         versionCode 1
         versionName "1.0"
         buildConfigField("boolean", "IS_NEW_ARCHITECTURE_ENABLED", IS_NEW_ARCHITECTURE_ENABLED.toString())
@@ -253,7 +253,7 @@ android {
                         "-DREACT_NATIVE_DIR=${toPlatformFileString(reactNativeRootDir.path)}",
                         "-DJS_RUNTIME=${JS_RUNTIME}",
                         "-DJS_RUNTIME_DIR=${jsRuntimeDir}",
-                        "-DIS_NEW_ARCHITECTURE_ENABLED=${IS_NEW_ARCHITECTURE_ENABLED}",
+                        "-DIS_NEW_ARCHITECTURE_ENABLED=false",
                         "-DIS_REANIMATED_EXAMPLE_APP=${IS_REANIMATED_EXAMPLE_APP}",
                         "-DREANIMATED_VERSION=${REANIMATED_VERSION}",
                         "-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES=ON"

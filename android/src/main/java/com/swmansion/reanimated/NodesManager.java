@@ -168,7 +168,7 @@ public class NodesManager implements EventDispatcherListener {
     mContext = context;
     mWorkletsModule = workletsModule;
     int uiManagerType =
-        BuildConfig.IS_NEW_ARCHITECTURE_ENABLED ? UIManagerType.FABRIC : UIManagerType.DEFAULT;
+        false ? UIManagerType.FABRIC : UIManagerType.DEFAULT;
     mUIManager = UIManagerHelper.getUIManager(context, uiManagerType);
     assert mUIManager != null;
     mUIImplementation =
@@ -187,7 +187,7 @@ public class NodesManager implements EventDispatcherListener {
           }
         };
 
-    if (!BuildConfig.IS_NEW_ARCHITECTURE_ENABLED) {
+    if (!false) {
       // We register as event listener at the end, because we pass `this` and we haven't finished
       // constructing an object yet.
       // This lead to a crash described in
@@ -237,7 +237,7 @@ public class NodesManager implements EventDispatcherListener {
   }
 
   public void performOperations() {
-    if (BuildConfig.IS_NEW_ARCHITECTURE_ENABLED) {
+    if (false) {
       if (mNativeProxy != null) {
         mNativeProxy.performOperations();
       }

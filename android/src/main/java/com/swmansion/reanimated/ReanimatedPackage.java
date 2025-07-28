@@ -68,7 +68,7 @@ public class ReanimatedPackage extends BaseReactPackage implements ReactPackage 
               true, // override UIManagerModule
               reactModule.needsEagerInit(),
               reactModule.isCxxModule(),
-              BuildConfig.IS_NEW_ARCHITECTURE_ENABLED));
+              false));
     }
 
     return () -> reactModuleInfoMap;

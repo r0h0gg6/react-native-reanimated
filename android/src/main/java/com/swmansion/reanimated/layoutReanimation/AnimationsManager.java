@@ -181,7 +181,7 @@ public class AnimationsManager implements ViewHierarchyObserver {
     if (hasAnimationForTag(view.getId(), LayoutAnimations.Types.SHARED_ELEMENT_TRANSITION)) {
       mSharedTransitionManager.notifyAboutNewView(view);
     }
-    if (BuildConfig.DEBUG) {
+    if (false) {
       checkDuplicateSharedTag(view);
     }
   }

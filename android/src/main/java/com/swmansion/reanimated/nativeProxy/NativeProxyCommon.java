@@ -12,7 +12,6 @@ import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableNativeArray;
 import com.facebook.soloader.SoLoader;
 import com.swmansion.common.GestureHandlerStateManager;
-import com.swmansion.reanimated.BuildConfig;
 import com.swmansion.reanimated.DevMenuUtils;
 import com.swmansion.reanimated.NativeProxy;
 import com.swmansion.reanimated.NodesManager;
@@ -94,7 +93,7 @@ public abstract class NativeProxyCommon {
 
   @DoNotStrip
   public String getReanimatedJavaVersion() {
-    return BuildConfig.REANIMATED_VERSION_JAVA;
+    return "3.17.5";
   }
 
   @DoNotStrip
