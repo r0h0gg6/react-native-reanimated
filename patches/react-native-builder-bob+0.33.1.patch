@@ -1,0 +1,18 @@
+diff --git a/node_modules/react-native-builder-bob/babel-preset.js b/node_modules/react-native-builder-bob/babel-preset.js
+index 44820fa..a8272b8 100644
+--- a/node_modules/react-native-builder-bob/babel-preset.js
++++ b/node_modules/react-native-builder-bob/babel-preset.js
+@@ -35,13 +35,6 @@ module.exports = function (api, options, cwd) {
+           modules: cjs ? 'commonjs' : false,
+         },
+       ],
+-      [
+-        require.resolve('@babel/preset-react'),
+-        {
+-          runtime:
+-            options.jsxRuntime !== undefined ? options.jsxRuntime : 'automatic',
+-        },
+-      ],
+       require.resolve('@babel/preset-typescript'),
+       require.resolve('@babel/preset-flow'),
+     ],
