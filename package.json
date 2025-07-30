@@ -30,8 +30,7 @@
     "circular-dependency-check": "yarn madge --extensions js,ts,tsx --circular src lib",
     "use-strict-check": "node ./scripts/validate-use-strict.js",
     "prepack": "cp ../../README.md ./README.md",
-    "postpack": "rm ./README.md",
-    "prepare": "yarn build:plugin"
+    "postpack": "rm ./README.md"
   },
   "main": "lib/module/index",
   "module": "lib/module/index",
